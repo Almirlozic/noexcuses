@@ -19,6 +19,17 @@
   --bg-color: #fdf8ee;
   --text-color: #353535;
 }
+ 
+/* Farver */
+
+:root {
+  --orange-color: #FF712A;
+  --darkgrey-color: #353535;
+  --lightgrey-color: #5D5D5D;
+  --offwhite-color: #FDF8EE;
+  --beige-color: #EDE7DA;
+}
+
 
 h1,
 h2,

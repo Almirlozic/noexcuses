@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import signup from "../assets/images/signup.jpg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Sign Up</title>
+  </head>
+  <Layout>
+    <main class="sign-up">
+      <div class="signup-wrapper">
+        <form class="sign-up-form">
+          <h1>GET IN TOUCH</h1>
+          <p>
+            Do you have any questions? <br /> Do you want to collaborate on an event? <br /> Interested in personal or company
+            training? <br /> Fill out the form or reach out through our socials and we will contact you.
+          </p>
+          <label for="name">NAME:</label>
+          <input id="name" type="text" name="name" required />
+
+          <label for="email">E-MAIL:</label>
+          <input id="email" type="email" name="email" required />
+
+          <label for="password">PASSWORD</label>
+          <input id="password" type="password" name="password" required />
+
+          <button id="signin-btn" type="submit">SIGN UP</button>
+        </form>
+      </div>
+    </main>
+    <img src={signup.src} alt="people in a team" />
+  </Layout>
+</html>
+
+<style>
+  #signin-btn {
+    margin-top: 1rem;
+    background-color: #d8a8a0;
+    color: #f0eade;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+</style>
