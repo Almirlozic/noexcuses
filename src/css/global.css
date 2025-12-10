@@ -1,17 +1,18 @@
 @font-face {
-  font-family: "roboto text";
-  src: url(/assets/fonte/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+  font-family: roboto p;
+  src: url(../assets/fonte/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
   font-style: normal;
 }
 
 @font-face {
-  font-family: "roboto overskrift";
-  src: url(/assets/fonte/Roboto_Condensed/static/RobotoCondensed-SemiBold.ttf);
+  font-family: roboto overskrift;
+  src: url(../assets/fonte/Roboto_Condensed/static/RobotoCondensed-SemiBold.ttf);
+  font-style: light;
 }
 
 @font-face {
-  font-family: "roboto h3";
-  src: url(/assets/fonte/Roboto_Condensed/static/RobotoCondensed-SemiBoldItalic.ttf);
+  font-family: roboto h3;
+  src: url(../assets/fonte/Roboto_Condensed/static/RobotoCondensed-SemiBoldItalic.ttf);
 }
 
 :root {
@@ -29,14 +30,19 @@ p {
   color: var(--text-color);
 }
 
-p {
-  font-family: "roboto text";
+.p2 {
+  color: #5d5d5d;
+}
+
+p,
+.p2 {
+  font-family: roboto p;
 }
 
 h1,
 h2 {
-  font-family: "roboto overskrift";
+  font-family: roboto overskrift;
 }
 h3 {
-  font-family: "overskrift h3";
+  font-family: roboto h3;
 }
