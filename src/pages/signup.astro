@@ -15,23 +15,23 @@ import signup from "../assets/images/signup.jpg";
     <main>
       <section class="sign-up">
         <div class="signup-wrapper">
-          <h1>No <span class="italic">MORE </span> Excuses - Just Sign Up</h1>
+          <h1>No<span class="italic">MORE </span> Excuses, <br />Just Sign Up!</h1>
           <p class="p2">Book sessions, manage your bundles and join the community.</p>
 
           <form class="sign-up-form">
-            <label> <input id="name" type="text" placeholder="NAME" required /></label>
+            <label> <input id="name" type="text" placeholder="NAME:" required /></label>
 
-            <label> <input id="email" type="text" placeholder="EMAIL" required /></label>
+            <label> <input id="email" type="text" placeholder="EMAIL:" required /></label>
 
             <label>
-              <input id="password" type="password" placeholder="PASSWORD" required />
+              <input id="password" type="password" placeholder="PASSWORD:" required />
             </label>
 
             <button id="signin-btn" type="submit">SIGN UP</button>
           </form>
         </div>
+        <img src={signup.src} alt="people in a team" />
       </section>
-      <img src={signup.src} alt="people in a team" />
     </main>
     <section class="prices"></section>
   </Layout>
@@ -39,16 +39,29 @@ import signup from "../assets/images/signup.jpg";
 
 <style>
   .p2 {
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
   }
   h1 {
-    font-size: 20px;
+    font-size: 24px;
     text-transform: uppercase;
   }
 
   .italic {
     font-style: italic;
+  }
+
+  .sign-up-form label {
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+
+  .sign-up-form input,
+  textarea {
+    width: 100%;
+    border: 1px solid var(--darkgrey-color);
+    padding: 0.8rem;
+    font-size: 12px;
   }
 
   #signin-btn {
@@ -60,6 +73,10 @@ import signup from "../assets/images/signup.jpg";
     padding: 0.8rem 2rem;
     cursor: pointer;
     transition: all 0.2s ease;
+  }
+
+  textarea {
+    height: 120px;
   }
 
   .sign-up {
@@ -79,5 +96,15 @@ import signup from "../assets/images/signup.jpg";
   .signup-wrapper {
     max-width: 450px;
     width: 100%;
+  }
+
+  .sign-up img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+  main {
+    margin: 50px;
   }
 </style>
