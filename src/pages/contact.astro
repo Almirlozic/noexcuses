@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import contact from "../assets/images/contact.jpg";
 ---
 
 <Layout>
@@ -28,16 +29,7 @@ import Layout from "../layouts/Layout.astro";
 
           <button type="submit" class="btn-submit">SUBMIT</button>
         </form>
-
-        <img class="contact-image" src="/images/running.jpg" alt="People running" />
-
-        <footer class="footer">
-          <h3>NO.EXCUSES™</h3>
-          <div class="icons">
-            <a href="#"><img src="/icons/instagram.svg" alt="Instagram" /></a>
-            <a href="#"><img src="/icons/tiktok.svg" alt="TikTok" /></a>
-          </div>
-        </footer>
+        <img class="contact-image" src={contact.src} alt="people running" />
       </section>
     </body>
   </html>
@@ -50,12 +42,8 @@ import Layout from "../layouts/Layout.astro";
     color: #333;
   }
 
-  h2 {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-
   p {
+    font-size: 12px;
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
@@ -101,23 +89,6 @@ import Layout from "../layouts/Layout.astro";
     margin: 2rem 0;
     display: block;
     border-radius: 4px;
-  }
-
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    border-top: 1px solid #aaa;
-  }
-
-  .footer h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .icons img {
-    width: 32px;
-    margin: 0 0.5rem;
   }
 
   /* Tablet & up */
