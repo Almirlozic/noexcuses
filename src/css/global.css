@@ -48,7 +48,8 @@ label {
 }
 
 p,
-.p2 {
+.p2, 
+input {
   font-family: roboto p;
 }
 
