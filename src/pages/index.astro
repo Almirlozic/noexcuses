@@ -1,8 +1,62 @@
 ---
+import Font from "astro/components/Font.astro";
 import Layout from "../layouts/Layout.astro";
-
+import Faq from "../components/Faq.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout />
+<Layout>
+  <header></header>
+
+  <section class="intro_grid">
+    <div>
+      <h3>OUR CONCEPT</h3>
+      <p>
+        We train outside all year round - rain, wind or sun. No excuses. While
+        most people stay indoors, we choose fresh air, daylight and the streets
+        of Copenhagen as our only equipment. The benefits are countless, but
+        most of all: we enjoy it. We also offer company training for teams who
+        want to move together, build energy and create a stronger community at
+        work.
+      </p>
+      <h3>HOW TO GET STARTED</h3>
+      <p>
+        1. Sign up <br />
+        2. Pick your session <br />
+        3. Just show up - bring yourself, a mat, a water bottle and, most importantly,
+        a smile. We’ll take care of the rest.
+      </p>
+
+      <a class="CTA_started" href="#">SIGN UP TO GET STARTED</a>
+    </div>
+  </section>
+  <main>
+    <Faq
+      text1="CAN I JOIN AS A BEGINNER?"
+      text2="WHERE DO YOU TRAIN?"
+      text3="WHAT HAPPENS WHEN THE WEATHER IS BAD?"
+      text4="WHAT DO I NEED TO BRING TO TRAINING?"
+      text5="DO YOU OFFER COMPANY TRAINING?"
+      p1="Yes! All levels are more than welcome. We adapt the training to your level so everyone can join — no matter your experience."
+      p2="We train outdoors at different locations in Copenhagen. You can always see the current schedule and meeting points"
+      p3="There is no such thing as bad weather, only wrong clothes. We train outside all year round — rain, wind or sun, NO EXCUSES! "
+      p4="Just bring yourself, a water bottle, and a good mood, and we’ll take care of the rest. For some sessions, a mat is useful, but it’s not required."
+      p5="Yes we do! Contact us to set up a training plan for company or give us your bosses contact info and we’ll handle the rest ;)"
+    />
+  </main>
+
+  <style>
+    .intro_grid {
+      padding: 20px;
+    }
+    .CTA_started {
+      padding: 10px;
+      background-color: transparent;
+      border: 2px solid black;
+      color: black;
+      font-family: roboto p;
+      text-decoration: none;
+    }
+  </style>
+</Layout>
