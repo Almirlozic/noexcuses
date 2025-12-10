@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <html lang="en">
+    <head>
+      <title>Contact</title>
+      <meta charset="utf-8" />
+    </head>
+    <body>
+      <section class="contact">
+        <h1>GET IN TOUCH</h1>
+        <p>Do you have any questions?<br />Do you want to collaborate on an event?<br />Interested in personal or company training?</p>
+        <p>Fill out the form or reach out through our socials and we will contact you.</p>
+        <form class="contact-form">
+          <label>
+            <input type="text" placeholder="Your name" />
+          </label>
+
+          <label>
+            <input type="email" placeholder="Your e-mail" />
+          </label>
+
+          <label>
+            <textarea placeholder="Your message"></textarea>
+          </label>
+
+          <button type="submit" class="btn-submit">SUBMIT</button>
+        </form>
+
+        <img class="contact-image" src="/images/running.jpg" alt="People running" />
+
+        <footer class="footer">
+          <h3>NO.EXCUSES™</h3>
+          <div class="icons">
+            <a href="#"><img src="/icons/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="/icons/tiktok.svg" alt="TikTok" /></a>
+          </div>
+        </footer>
+      </section>
+    </body>
+  </html>
+</Layout>
+
+<style>
+  .contact {
+    padding: 2rem 3rem;
+    background: #f8f3ea;
+    color: #333;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  p {
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Form */
+  .contact-form label {
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-form span {
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background: white;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background: #e76f32;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  /* Image */
+  .contact-image {
+    width: 100%;
+    margin: 2rem 0;
+    display: block;
+    border-radius: 4px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #aaa;
+  }
+
+  .footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .icons img {
+    width: 32px;
+    margin: 0 0.5rem;
+  }
+
+  /* Tablet & up */
+  @media (min-width: 768px) {
+    .contact {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .btn-submit {
+      width: 200px;
+      margin: 1rem auto;
+      display: block;
+    }
+
+    .contact-image {
+      width: 60%;
+      margin: 2rem auto;
+    }
+
+    .footer {
+      padding: 2rem 0;
+    }
+  }
+</style>
