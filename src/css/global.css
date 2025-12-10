@@ -64,9 +64,9 @@ h4 {
 p {
   font-size: var(--p);
   font-family: "roboto-p", sans-serif;
-
+}
 p,
-.p2, 
+.p2,
 input {
   font-family: roboto p;
 }
