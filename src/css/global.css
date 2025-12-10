@@ -37,7 +37,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a,
+label {
   color: var(--text-color);
 }
 
@@ -51,7 +53,10 @@ p,
 }
 
 h1,
-h2 {
+h2,
+label,
+a,
+button {
   font-family: roboto overskrift;
 }
 h3 {

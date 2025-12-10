@@ -12,41 +12,72 @@ import signup from "../assets/images/signup.jpg";
     <title>Sign Up</title>
   </head>
   <Layout>
-    <main class="sign-up">
-      <div class="signup-wrapper">
-        <form class="sign-up-form">
-          <h1>GET IN TOUCH</h1>
-          <p>
-            Do you have any questions? <br /> Do you want to collaborate on an event? <br /> Interested in personal or company
-            training? <br /> Fill out the form or reach out through our socials and we will contact you.
-          </p>
-          <label for="name">NAME:</label>
-          <input id="name" type="text" name="name" required />
+    <main>
+      <section class="sign-up">
+        <div class="signup-wrapper">
+          <h1>No <span class="italic">MORE </span> Excuses - Just Sign Up</h1>
+          <p class="p2">Book sessions, manage your bundles and join the community.</p>
 
-          <label for="email">E-MAIL:</label>
-          <input id="email" type="email" name="email" required />
+          <form class="sign-up-form">
+            <label> <input id="name" type="text" placeholder="NAME" required /></label>
 
-          <label for="password">PASSWORD</label>
-          <input id="password" type="password" name="password" required />
+            <label> <input id="email" type="text" placeholder="EMAIL" required /></label>
 
-          <button id="signin-btn" type="submit">SIGN UP</button>
-        </form>
-      </div>
+            <label>
+              <input id="password" type="password" placeholder="PASSWORD" required />
+            </label>
+
+            <button id="signin-btn" type="submit">SIGN UP</button>
+          </form>
+        </div>
+      </section>
+      <img src={signup.src} alt="people in a team" />
     </main>
-    <img src={signup.src} alt="people in a team" />
+    <section class="prices"></section>
   </Layout>
 </html>
 
 <style>
+  .p2 {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
   #signin-btn {
     margin-top: 1rem;
-    background-color: #d8a8a0;
-    color: #f0eade;
-    font-weight: 600;
+    background-color: var(--orange-color);
+    color: var(--offwhite-color);
+
     border: none;
-    border-radius: 10px;
     padding: 0.8rem 2rem;
     cursor: pointer;
     transition: all 0.2s ease;
+  }
+
+  .sign-up {
+    text-align: center;
+    line-height: 20px;
+  }
+  h1 {
+    margin-bottom: 0px;
+  }
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+
+  .signup-wrapper {
+    max-width: 450px;
+    width: 100%;
   }
 </style>
