@@ -11,20 +11,31 @@ import image2 from "../assets/images/about.jpg"
     <meta charset="UTF-8" />
     <title>Min Astro side</title>
   </head>
-  <body>
-   <main>
-    <section>
-        <h1>About</h1>
-        <Image src={image1} alt="coaches">
-    </section>
-    <div class="faq"></div>
-    <section>
-        <h2>MEET THE TEAM</h2>
-        <Image src={image2} alt="coach k">
-    </section>
-   </main>
-  </body>
-</html>
+<Layout>
+      <body>
+          <main>
+              <section>
+                  <h1>About</h1>
+                  <Image src={image1} alt="coaches">
+                </section>
+                <div class="faq"></div>
+                <section class="flex">
+                    <div>
+                        <h2>MEET THE TEAM</h2>
+                        <span class="underline"></span>
+                        <Image src={image2} alt="coach k">
+                    </div>
+                    <div>
+                        <Image src={image2} alt="coach k">
+                    </div>
+                    <div>
+                        <Image src={image2} alt="coach k">
+                    </div>
+                    </section>
+                </main>
+            </body>
+            </html>
+ </Layout>
 
 
 <style>
@@ -33,9 +44,16 @@ import image2 from "../assets/images/about.jpg"
         width: 100%;
         height: auto;
     }
-
-    section{
-        
+/*     .flex{
+        display: flex;
+        justify-content: center;
+    }
+ */
+    .underline{
+        border-bottom: 1px solid #353535;
+    }
+    h2{
+        text-align: center;
     }
 
 </style>
