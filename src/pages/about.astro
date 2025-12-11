@@ -9,23 +9,25 @@ import Faq from "../components/Faq.astro";
 ---
 
 <Layout>
-  <section class="about">
+  <section class="grid">
     <h1>About</h1>
-    <Image src={image1} alt="" />
-  </section>
-  <section class="faq">
-    <Faq
-      text1="CAN I JOIN AS A BEGINNER?"
-      p1="hej"
-      text2="WHERE DO YOU TRAIN?"
-      p2="hej"
-      text3="WHAT HAPPENS WHEN THE WEATHER IS BAD?"
-      p3="hej"
-      text4="WHAT DO I NEED TO BRING TO TRAINING?"
-      p4="hej"
-      text5="DO YOU DO COMPANY TRAINING?"
-      p5="Yes we do! Contact us to set up a training plan for company or give us your bosses contact info and well handle the rest ;)"
-    />
+    <section class="about">
+      <Image src={image1} alt="" />
+    </section>
+    <section class="faq">
+      <Faq
+        text1="CAN I JOIN AS A BEGINNER?"
+        p1="Absolutely! Our training is beginner-friendly, and we tailor every session so you can join no matter your level."
+        text2="WHERE DO YOU TRAIN?"
+        p2="We train outdoors at different spots around the city. You’ll get the location before each session, and we always make sure it’s easy to get to."
+        text3="WHAT HAPPENS WHEN THE WEATHER IS BAD?"
+        p3="We train outside year-round — but if the weather becomes unsafe, we adjust the session or move to a safer location. You’ll always get an update beforehand."
+        text4="WHAT DO I NEED TO BRING TO TRAINING?"
+        p4="Just sportswear, good shoes, and water. That’s it! We bring everything else you need for the workout."
+        text5="DO YOU DO COMPANY TRAINING?"
+        p5="Yes we do! Contact us to set up a training plan for company or give us your bosses contact info and well handle the rest ;)"
+      />
+    </section>
   </section>
   <section class="flex">
     <h2>MEET THE TEAM</h2>
@@ -59,8 +61,17 @@ import Faq from "../components/Faq.astro";
       height: auto;
     }
 
-    .about {
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .about,
+    h1 {
       padding: 20px;
+    }
+    .about img {
+      margin-top: -50px;
     }
 
     h2 {
@@ -93,6 +104,38 @@ import Faq from "../components/Faq.astro";
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
+    }
+
+    @media (min-width: 659px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "image text"
+          "image text";
+        margin-top: 100px;
+        padding: 20px;
+      }
+
+      h1 {
+        grid-area: text;
+        margin-top: -30px;
+      }
+
+      .about {
+        grid-area: image;
+      }
+
+      .faq {
+        grid-area: text;
+        /* margin-top: 100px; */
+      }
+      .team-container {
+        display: flex;
+        justify-content: space-around;
+      }
+      .team-member {
+        width: 30%;
+      }
     }
   </style>
 </Layout>
