@@ -1,0 +1,29 @@
+---
+const { text1, text2, text3, knap, text4 } = Astro.props;
+---
+
+<section class="prices">
+  <h2>{text1}</h2>
+  <h4>{text2}</h4>
+  <p>{text3}</p>
+  <button>{knap}</button>
+  <p>{text4}</p>
+</section>
+
+<style>
+  button {
+    margin-top: 1rem;
+    background-color: var(--orange-color);
+    color: var(--offwhite-color);
+
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  button:hover {
+    background-color: var(--darkgrey-color);
+    transition: all 0.5s ease;
+  }
+</style>
