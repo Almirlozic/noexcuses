@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import signup from "../assets/images/signup.jpg";
+import Prices from "../components/Prices.astro";
 ---
 
 <html lang="en">
@@ -9,11 +10,13 @@ import signup from "../assets/images/signup.jpg";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
     <title>Sign Up</title>
   </head>
   <Layout>
     <main>
       <section class="sign-up">
+        <img src={signup.src} alt="people in a team" />
         <div class="signup-wrapper">
           <h1>No<span class="italic">MORE </span> Excuses, <br />Just Sign Up!</h1>
           <p class="p2">Book sessions, manage your bundles and join the community.</p>
@@ -27,24 +30,57 @@ import signup from "../assets/images/signup.jpg";
               <input id="password" type="password" placeholder="PASSWORD:" required />
             </label>
 
-            <button id="signin-btn" type="submit">SIGN UP</button>
+            <a href=""><button id="signin-btn" type="submit">SIGN UP</button></a>
           </form>
         </div>
-        <img src={signup.src} alt="people in a team" />
+      </section>
+      <section class="prices">
+        <h1>BUNDLES & PRICES</h1>
+        <p class="p2">
+          We offer our prices in simple bundles. <br />
+          To buy one, just sign up or log in.
+        </p>
+        <div class="bundles">
+          <Prices
+            text1="1 - ONE NIGHT STAND"
+            text2="DKK 170,-"
+            text3="A short affair. If you like us and want to see us again, we are also ready for a slightly longer relationship."
+            knap="PURCHASE"
+            text4="NB: Valid for 50 days from the date of purchase."
+          />
+        </div>
       </section>
     </main>
-    <section class="prices"></section>
   </Layout>
 </html>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+  .sign-up {
+    margin: 50px;
+  }
+
+  input {
+    font-family: roboto-p;
+    font-size: var(--p);
+  }
+
   .p2 {
     font-size: 14px;
     text-transform: uppercase;
   }
+
+  button {
+    font-size: 14px;
+  }
+
   h1 {
     font-size: 24px;
     text-transform: uppercase;
+    color: var(--text-color);
+    margin-bottom: 0;
   }
 
   .italic {
@@ -61,7 +97,7 @@ import signup from "../assets/images/signup.jpg";
     width: 100%;
     border: 1px solid var(--darkgrey-color);
     padding: 0.8rem;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   #signin-btn {
@@ -70,9 +106,14 @@ import signup from "../assets/images/signup.jpg";
     color: var(--offwhite-color);
 
     border: none;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2rem;
     cursor: pointer;
     transition: all 0.2s ease;
+  }
+
+  #signin-btn:hover {
+    background-color: var(--darkgrey-color);
+    transition: all 0.5s ease;
   }
 
   textarea {
@@ -82,15 +123,14 @@ import signup from "../assets/images/signup.jpg";
   .sign-up {
     text-align: center;
     line-height: 20px;
+    align-items: center;
   }
-  h1 {
-    margin-bottom: 0px;
-  }
+
   .sign-up-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 2rem;
   }
 
   .signup-wrapper {
@@ -99,12 +139,32 @@ import signup from "../assets/images/signup.jpg";
   }
 
   .sign-up img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    display: block;
+    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
   }
-  main {
-    margin: 50px;
+
+  .prices {
+    background-color: var(--beige-color);
+    padding: 20px;
+    width: 100%;
+  }
+
+  .bundles {
+    background-color: var(--offwhite-color);
+  }
+
+  .bundles-p {
+    font-style: italic;
+  }
+
+  @media (min-width: 659px) {
+    .sign-up img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+    }
   }
 </style>
