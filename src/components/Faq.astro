@@ -31,14 +31,25 @@ const { p1, p2, p3, p4, p5 } = Astro.props;
 </section>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
   .faq {
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .accordion {
     background-color: transparent;
     color: #444;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 10px; /* only vertical padding */
     width: 100%;
     text-align: left;
     border: none;
@@ -51,24 +62,29 @@ const { p1, p2, p3, p4, p5 } = Astro.props;
   .accordion:hover {
     background-color: transparent;
     color: #ff712a;
+    cursor: pointer;
   }
 
   .accordion:after {
-    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    content: "\02795";
     float: right;
-    margin-left: 5px;
   }
 
   .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2796";
   }
   .panel {
-    width: 102%;
-    background-color: transparent;
+    width: 100%;
+    padding: 0 15px; /* only horizontal padding */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     border-bottom: 2px solid black;
+  }
+  .panel p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 350px;
   }
 </style>
 
