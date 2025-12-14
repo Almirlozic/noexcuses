@@ -178,9 +178,11 @@ import Faq from "../components/Faq.astro";
       text-decoration: none;
       border: 1.5px solid var(--orange-color);
     }
-    a:hover {
-      background-color: var(--darkgrey-color);
-      border: 1.5px solid var(--darkgrey-color);
+    .primary_CTA:hover {
+      background-color: white;
+      border: 1.5px solid white;
+      color: black;
+      transition: all 0.5s ease;
     }
     a:active {
       transform: translateY(2px);
@@ -188,6 +190,7 @@ import Faq from "../components/Faq.astro";
     .alternative_CTA:hover {
       border: 1.5px solid white;
       background-color: transparent;
+      transition: all 0.5s ease;
     }
 
     .alternative_CTA {
@@ -204,6 +207,12 @@ import Faq from "../components/Faq.astro";
       color: black;
       text-decoration: none;
     }
+    .CTA_started:hover {
+      border: 1.5px solid var(--orange-color);
+      color: var(--orange-color);
+      transition: all 0.5s ease;
+    }
+
     .index_img img {
       margin-top: 50px;
       max-width: 100%;
@@ -223,10 +232,16 @@ import Faq from "../components/Faq.astro";
       margin: auto;
       margin-top: 20px;
     }
+    .AGC a:hover {
+      background-color: var(--darkgrey-color);
+      border: 1.5px solid var(--darkgrey-color);
+      transition: all 0.5s ease;
+    }
     .AGC p {
       margin: auto;
       margin-bottom: 30px;
     }
+
     .line {
       width: 80%;
       height: 1.5px;
