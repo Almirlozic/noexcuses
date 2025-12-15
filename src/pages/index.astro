@@ -34,8 +34,8 @@ import Faq from "../components/Faq.astro";
         <div><p>Stronger together, 365 days a year</p></div>
 
         <div class="hero_CTA">
-          <a href="#" class="primary_CTA">SIGN UP</a>
-          <a href="#" class="alternative_CTA">OUR TRAINING</a>
+          <a href="/signup" class="primary_CTA">SIGN UP</a>
+          <a href="/training" class="alternative_CTA">OUR TRAINING</a>
         </div>
       </div>
     </section>
@@ -61,7 +61,7 @@ import Faq from "../components/Faq.astro";
             a smile. We’ll take care of the rest.
           </p>
 
-          <a class="CTA_started" href="#">VIEW BUNDLES & GET STARTED</a>
+          <a class="CTA_started" href="/signup">VIEW BUNDLES & GET STARTED</a>
         </div>
         <div class="index_img">
           <img src="/src/assets/images/index.jpg" alt="team training" />
@@ -75,7 +75,7 @@ import Faq from "../components/Faq.astro";
           <p>
             Once a year, we come together for a special workout supported by our
             sponsors. All proceeds are donated to a chosen charity.
-            <a href="#">READ MORE</a>
+            <a href="/a-good-cause">READ MORE</a>
           </p>
         </div>
 
@@ -260,11 +260,11 @@ import Faq from "../components/Faq.astro";
 
     @media only screen and (min-width: 659px) {
       h2 {
-        font-size: 37px;
+        font-size: 34px;
         margin: 0;
       }
       h3 {
-        font-size: 26px;
+        font-size: 22px;
         margin: 0;
       }
       p {
@@ -276,7 +276,7 @@ import Faq from "../components/Faq.astro";
       }
 
       .body {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: auto;
       }
       .hero_content {
@@ -389,6 +389,9 @@ import Faq from "../components/Faq.astro";
       .FAQ {
         display: grid;
         grid-template-columns: 1fr 1fr;
+      }
+      .FAQ h2 {
+        margin-top: 30px;
       }
     }
   </style>
