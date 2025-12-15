@@ -30,20 +30,14 @@ import Goodcause from "../assets/images/goodcause.jpg";
     <h3>Funds Raised This Year</h3>
     <p id="count-up" data-target="173762">0 KR.</p>
     <p>We walked 120 km on the Camino to raise funds for BørneTelefonen - and thanks to your support, we collected an amazing 173,762 DKK. Every step helped support children and young people in need.</p>
-    <a class="button" href="">JOIN US NEXT TIME</a>
+    <a class="button" href="">
+      <button>JOIN US NEXT TIME</button>
+    </a>
   </div>
   <section class="galleri">
-    <div class="galleri-top">
-      <div>
-        <img class="Goodcause2" src={Goodcause2.src} alt="goodcause2" />
-      </div>
-      <div>
-        <img class="Goodcause" src={Goodcause.src} alt="goodcause" />
-      </div>
-    </div>
-    <div class="galleri-bottom">
-      <img class="Goodcause4" src={Goodcause4.src} alt="goodcause4" />
-    </div>
+    <img src={Goodcause2.src} alt="goodcause2" />
+    <img src={Goodcause.src} alt="goodcause" />
+    <img src={Goodcause4.src} alt="goodcause4" />
   </section>
 </Layout>
 
@@ -108,49 +102,40 @@ import Goodcause from "../assets/images/goodcause.jpg";
     margin: 20px 0;
   }
 
-  a {
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  .button {
-    display: block;
+  button {
     background-color: var(--darkgrey-color);
     color: var(--offwhite-color);
     border: none;
     padding: 20px 60px;
     margin-top: 30px;
     margin-bottom: 10px;
-    text-decoration: none;
-    align-content: center;
   }
 
-  .button:hover {
+  button:hover {
     background-color: var(--orange-color);
     color: var(--offwhite-color);
   }
 
   .galleri {
-    margin: 20px;
-  }
-
-  .galleri-top img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  /* GRID LAYOUT */
-  .galleri-top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    margin: 20px;
   }
 
-  .galleri-bottom {
+  .galleri img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .galleri :nth-child(1) {
+    height: 300px;
+  }
+  .galleri :nth-child(2) {
+    height: 300px;
+  }
+  .galleri :nth-child(3) {
     grid-column: span 2;
-    margin-top: 20px;
   }
 
   @media (min-width: 1024px) {
@@ -160,7 +145,7 @@ import Goodcause from "../assets/images/goodcause.jpg";
     }
     .hero-text {
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 40%;
       transform: translateY(-50%);
       color: white;
@@ -176,16 +161,58 @@ import Goodcause from "../assets/images/goodcause.jpg";
       margin: 25px;
       font-weight: 300;
     }
+
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 140px;
+    }
+
+    .info-text {
+      padding: 50px 70px;
+    }
+
+    .Goodcause3 {
+      width: 500px;
+      padding: 50px;
+    }
+
+    .funds-raised {
+      margin: 10px 100px;
+      padding: 40px;
+    }
+
+    .funds-raised p {
+      padding: 10px 250px;
+      line-height: 1.5;
+      padding-bottom: 30px;
+    }
+
+    .galleri {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 20px;
+    }
+
+    .galleri img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+    }
+
+    .galleri :nth-child(3) {
+      grid-column: 2 / 3;
+      grid-row: 1;
+    }
   }
 </style>
-
 <script>
   const counter = document.getElementById("count-up");
   const target = parseInt(counter.dataset.target);
 
   function animateCount() {
     let current = 0;
-    const duration = 2000; // 2 sekunder
+    const duration = 4000; // 4 sekunder
     const increment = target / (duration / 16);
 
     const update = () => {
