@@ -82,7 +82,7 @@ import Faq from "../components/Faq.astro";
         <span class="line"></span>
         <div class="AGC_stats">
           <h3>Funds Raised This Year</h3>
-          <h2 style="color: var(--orange-color);">173.762 KR.</h2>
+          <p id="count-up" data-target="173762">0 KR.</p>
         </div>
       </section>
       <section class="FAQ">
@@ -112,6 +112,12 @@ import Faq from "../components/Faq.astro";
   </main>
 
   <style>
+    #count-up {
+      font-size: 48px;
+      font-weight: bold;
+      color: var(--orange-color);
+      margin: 20px 0;
+    }
     body {
       background-color: var(--bg-color);
     }
@@ -386,4 +392,40 @@ import Faq from "../components/Faq.astro";
       }
     }
   </style>
+  <script>
+    const counter = document.getElementById("count-up");
+    const target = parseInt(counter.dataset.target);
+
+    function animateCount() {
+      let current = 0;
+      const duration = 2000; // 2 sekunder
+      const increment = target / (duration / 16);
+
+      const update = () => {
+        current += increment;
+
+        if (current < target) {
+          counter.textContent =
+            Math.floor(current).toLocaleString("da-DK") + " KR.";
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target.toLocaleString("da-DK") + " KR.";
+        }
+      };
+
+      update();
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          animateCount();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(counter);
+  </script>
 </Layout>
