@@ -1,6 +1,7 @@
 ---
 import Font from "astro/components/Font.astro";
 import Layout from "../layouts/Layout.astro";
+import Faq from "../components/Faq.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -40,8 +41,8 @@ import Layout from "../layouts/Layout.astro";
             <h2>LEGS FOCUS - SMK</h2>
             <strong>The training includes:</strong>
             <ul>
-              <li>Hill sprints</li>
-              <li>Body weight exercises</li>
+              <li><p>Hill sprints</p></li>
+              <li><p>Body weight exercises</p></li>
             </ul>
 
             <p>
@@ -60,8 +61,8 @@ import Layout from "../layouts/Layout.astro";
             <h2>EVENING PUMP - NYBODER</h2>
             <strong>The training includes:</strong>
             <ul>
-              <li>Hill sprints</li>
-              <li>Body weight exercises</li>
+              <li><p>Burpees</p></li>
+              <li><p>Body weight exercises</p></li>
             </ul>
 
             <p>
@@ -80,8 +81,8 @@ import Layout from "../layouts/Layout.astro";
             <h2>OUTDOOR - BLOX</h2>
             <strong>The training includes:</strong>
             <ul>
-              <li>Hill sprints</li>
-              <li>Body weight exercises</li>
+              <li><p>250–500 meter runs</p></li>
+              <li><p>Weight lifting (various weight options)</p></li>
             </ul>
 
             <p>
@@ -100,8 +101,8 @@ import Layout from "../layouts/Layout.astro";
             <h2>FREAKY FRIDAY - OFELIA</h2>
             <strong>The training includes:</strong>
             <ul>
-              <li>Hill sprints</li>
-              <li>Body weight exercises</li>
+              <li><p>Circle training</p></li>
+              <li><p>Interval runs</p></li>
             </ul>
 
             <p>
@@ -132,23 +133,34 @@ import Layout from "../layouts/Layout.astro";
               <h3>Why Choose Outdoor Company Training?</h3>
               <ul>
                 <li>
-                  Team building: Working out together builds stronger
-                  relationships
+                  <p>
+                    Team building: Working out together builds stronger
+                    relationships
+                  </p>
                 </li>
                 <li>
-                  Fresh air & daylight: Boosts mood, productivity, and
-                  creativity
+                  <p>
+                    Fresh air & daylight: Boosts mood, productivity, and
+                    creativity
+                  </p>
                 </li>
                 <li>
-                  Professional coaching: Experienced instructors guiding safe
-                  and effective workouts
+                  <p>
+                    Professional coaching: Experienced instructors guiding safe
+                    and effective workouts
+                  </p>
                 </li>
                 <li>
-                  Flexible scheduling: Early mornings, lunch-hour, or after work
+                  <p>
+                    Flexible scheduling: Early mornings, lunch-hour, or after
+                    work
+                  </p>
                 </li>
                 <li>
-                  City-based training: Easy meet-up locations across Copenhagen
-                  - or even in your backyard
+                  <p>
+                    City-based training: Easy meet-up locations across
+                    Copenhagen - or even in your backyard
+                  </p>
                 </li>
               </ul>
               <p>
@@ -176,7 +188,6 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </section>
       </section>
-      <footer></footer>
     </body>
   </main>
 
@@ -358,7 +369,7 @@ import Layout from "../layouts/Layout.astro";
 
     @media only screen and (min-width: 659px) {
       .body {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: auto;
       }
       .hero {
@@ -371,14 +382,12 @@ import Layout from "../layouts/Layout.astro";
         margin-left: calc(50% - 50vw);
       }
       .hero_h1 {
-        font-size: 50px;
         margin-top: -27.5%;
         position: relative;
         text-align: center;
         z-index: 1;
       }
       .hero_p {
-        font-size: 22px;
         width: 100%;
         margin-top: -22%;
         position: relative;
@@ -405,7 +414,7 @@ import Layout from "../layouts/Layout.astro";
         text-align: center;
       }
       .Testimony_show {
-        width: 100%;
+        max-width: 1100px;
         padding: 30px;
         display: flex;
         float: left;
@@ -426,6 +435,7 @@ import Layout from "../layouts/Layout.astro";
         display: flex;
         margin: auto;
         justify-content: center;
+        width: 130%;
       }
       .DT_img img {
         max-width: 50%;
