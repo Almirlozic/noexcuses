@@ -2,6 +2,7 @@
 import Font from "astro/components/Font.astro";
 import Layout from "../layouts/Layout.astro";
 import Faq from "../components/Faq.astro";
+import SignUp from "../components/SignUp.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -9,12 +10,11 @@ import Faq from "../components/Faq.astro";
 <Layout>
   <main>
     <header></header>
+    <section>
+      <SignUp />
+    </section>
+
     <body>
-      <section class="sign_up_link">
-        <a href="/signup">
-          <img src="/src/assets/images/SuB.svg" alt="sign up button" />
-        </a>
-      </section>
       <section class="hero">
         <div>
           <img class="hero_img" src="/src/assets/images/training1.jpg" alt="" />
@@ -436,19 +436,6 @@ import Faq from "../components/Faq.astro";
       }
       .CT_hero_content span {
         font-size: 30px;
-      }
-      .sign_up_link {
-        position: fixed;
-        background-color: var(--darkgrey-color);
-        z-index: 4;
-        text-align: center;
-        right: 0;
-        margin-top: 20%;
-        display: none;
-      }
-      .sign_up_link img {
-        max-width: 50px;
-        padding: 5px;
       }
     }
   </style>
