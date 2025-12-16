@@ -11,7 +11,7 @@ import Faq from "../components/Faq.astro";
     <header></header>
     <body>
       <section class="sign_up_link">
-        <a href="singup.astro">
+        <a href="/signup">
           <img src="/src/assets/images/SuB.svg" alt="sign up button" />
         </a>
       </section>
@@ -164,12 +164,10 @@ import Faq from "../components/Faq.astro";
                 </li>
               </ul>
               <p>
-                <strong
-                  ><em
-                    >“Our team loved it, the outdoor sessions gave us new energy
-                    and connection.” <br /> — Company Client 2024</em
-                  >
-                </strong>
+                <em
+                  >“Our team loved it, the outdoor sessions gave us new energy
+                  and connection.” <br /> — Planet Nusa Director 2024</em
+                >
               </p>
               <a href="/src/pages/signup.astro">CONTACT US TO GET STARTED</a>
             </div>
@@ -192,19 +190,6 @@ import Faq from "../components/Faq.astro";
   </main>
 
   <style>
-    .sign_up_link {
-      position: fixed;
-      background-color: var(--darkgrey-color);
-      z-index: 4;
-      text-align: center;
-      right: 0;
-      margin-top: 40%;
-      display: none;
-    }
-    .sign_up_link img {
-      max-width: 40px;
-      padding: 5px;
-    }
     .SO {
       margin-left: 20px;
     }
@@ -367,7 +352,7 @@ import Faq from "../components/Faq.astro";
       object-fit: contain;
     }
 
-    @media only screen and (min-width: 659px) {
+    @media only screen and (min-width: 768px) {
       .body {
         max-width: 1100px;
         margin: auto;
@@ -447,7 +432,7 @@ import Faq from "../components/Faq.astro";
         position: relative;
         padding: 20px;
         z-index: 1;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
       }
       .CT_hero_content span {
         font-size: 30px;
@@ -458,7 +443,7 @@ import Faq from "../components/Faq.astro";
         z-index: 4;
         text-align: center;
         right: 0;
-        margin-top: 40%;
+        margin-top: 20%;
         display: none;
       }
       .sign_up_link img {
@@ -467,19 +452,4 @@ import Faq from "../components/Faq.astro";
       }
     }
   </style>
-
-  <script>
-    const mybutton = document.getElementsByClassName("sign_up_link")[0];
-
-    window.onscroll = function () {
-      if (
-        document.body.scrollTop > 400 ||
-        document.documentElement.scrollTop > 400
-      ) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    };
-  </script>
 </Layout>

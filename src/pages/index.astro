@@ -2,6 +2,7 @@
 import Font from "astro/components/Font.astro";
 import Layout from "../layouts/Layout.astro";
 import Faq from "../components/Faq.astro";
+import SignUp from "../components/SignUp.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -9,6 +10,9 @@ import Faq from "../components/Faq.astro";
 <Layout>
   <main>
     <header></header>
+    <section>
+      <SignUp />
+    </section>
     <section class="forside_hero">
       <video autoplay loop plays-inline class="bg-clip">
         <source src="/src/assets/images/noexcuses-video.mp4" />
@@ -101,7 +105,7 @@ import Faq from "../components/Faq.astro";
             text4="WHAT DO I NEED TO BRING TO TRAINING?"
             text5="DO YOU OFFER COMPANY TRAINING?"
             p1="Yes! All levels are more than welcome. We adapt the training to your level so everyone can join — no matter your experience."
-            p2="We train outdoors at different locations in Copenhagen. You can always see the current schedule and meeting points"
+            p2="We train outdoors at different locations in Copenhagen. You can always see the current schedule and meeting points under TRAINING"
             p3="There is no such thing as bad weather, only wrong clothes. We train outside all year round — rain, wind or sun, NO EXCUSES! "
             p4="Just bring yourself, a water bottle, and a good mood, and we’ll take care of the rest. For some sessions, a mat is useful, but it’s not required."
             p5="Yes we do! Contact us to set up a training plan for company or give us your bosses contact info and we’ll handle the rest ;)"
@@ -259,7 +263,7 @@ import Faq from "../components/Faq.astro";
       padding: 20px;
     }
 
-    @media only screen and (min-width: 659px) {
+    @media only screen and (min-width: 768px) {
       h2 {
         margin: 0;
       }
