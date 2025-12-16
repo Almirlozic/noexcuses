@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Products from "../components/Products.astro";
 import { optional } from "astro:schema";
+import SignUp from "../components/SignUp.astro";
 
 const endpoint =
   "https://yiiqdouriasazhyrfuzt.supabase.co/rest/v1/products?select=*&order=id.asc";
@@ -21,6 +22,9 @@ console.log(data);
 
 <Layout>
   <div class="container">
+    <section>
+      <SignUp />
+    </section>
     <div class="overskrift">
       <span>SUPPORT OUR BRAND</span>
       <h1>BY WEARING IT</h1>
@@ -76,7 +80,7 @@ console.log(data);
   }
 
   .overskrift {
-    margin-top: 100px;
+    margin-top: -50px;
     margin-bottom: -50px;
     padding: 10px;
   }
@@ -101,7 +105,7 @@ console.log(data);
   }
 
   /* desktop css */
-  @media (min-width: 768px) {
+  @media (min-width: 850px) {
     .container {
       max-width: 1100px;
       margin: auto;

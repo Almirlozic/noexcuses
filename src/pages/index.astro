@@ -139,6 +139,7 @@ import video from "../assets/images/noexcuses-video.mp4";
     .forside_hero video {
       width: 150%;
       left: 50%;
+      transform: translate(-15%);
       filter: blur(0.5px) brightness(0.5);
     }
     .forside_hero svg {
@@ -170,10 +171,9 @@ import video from "../assets/images/noexcuses-video.mp4";
     .hero_CTA a {
       margin: 10px;
       padding: 10px 15px;
-      width: 25vw;
+      width: 27vw;
       max-width: 150px;
       text-align: center;
-      font-size: 16px;
     }
     .intro_grid {
       padding: 20px;
@@ -268,7 +268,7 @@ import video from "../assets/images/noexcuses-video.mp4";
       padding: 20px;
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 850px) {
       h2 {
         margin: 0;
       }
@@ -302,29 +302,31 @@ import video from "../assets/images/noexcuses-video.mp4";
       .forside_hero svg {
         left: 48%;
         top: 30%;
-        height: 60px;
+        height: 50px;
+        transform: translate(-45% -50%);
+        position: absolute;
+        margin-top: 2.5vw;
       }
       .forside_hero p {
         position: absolute;
         transform: translate(-50%, -50%);
-        top: 46%;
+        top: 54%;
         left: 50%;
         color: white;
         width: 500px;
+        margin-top: -2.5vw;
       }
       .hero_CTA {
         display: flex;
         float: left;
         position: absolute;
-        top: 69%;
-        margin-top: -90px;
+        top: 60%;
       }
       .hero_CTA a {
         margin: 10px;
         padding: 1.5vw 3vw;
         max-width: 150px;
         text-align: center;
-        font-size: 22px;
       }
       .hero_content svg {
         margin-bottom: -55px;
@@ -353,7 +355,6 @@ import video from "../assets/images/noexcuses-video.mp4";
         padding: 20px 55px;
         width: 300px;
         text-align: center;
-        font-size: 22px;
       }
 
       .AGC {
