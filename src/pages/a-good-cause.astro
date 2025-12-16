@@ -16,7 +16,7 @@ import Goodcause from "../assets/images/goodcause.jpg";
     <img class="Goodcause1" src={Goodcause1.src} alt="goodcause1" />
     <div class="hero-text">
       <h1>A GOOD CAUSE</h1>
-      <p>Together, we make impact</p>
+      <em><p>Together, we make impact</p></em>
     </div>
   </section>
   <section class="body">
@@ -24,16 +24,14 @@ import Goodcause from "../assets/images/goodcause.jpg";
       <div class="info-text">
         <h2>WHAT IS “A GOOD CAUSE”?</h2>
         <p>
-          NO.EXCUSES hosts/co-hosts one big charity workout every year. We
-          gather the entire community — athletes, families, partners and
-          companies — for a day of movement, positivity and impact. Every penny
-          raised goes to a chosen Danish charity.
+          NO.EXCUSES hosts/co-hosts one big charity workout every year. We gather the entire community — athletes,
+          families, partners and companies — for a day of movement, positivity and impact. Every penny raised goes to a
+          chosen Danish charity.
         </p>
         <h2>WHY WE DO IT?</h2>
         <p>
-          Because fitness is more than exercise. It’s about showing up — for
-          yourself, and for each other. At NO.EXCUSES we believe that movement
-          creates connection, confidence and responsibility.
+          Because fitness is more than exercise. It’s about showing up — for yourself, and for each other. At NO.EXCUSES
+          we believe that movement creates connection, confidence and responsibility.
         </p>
       </div>
       <div>
@@ -44,9 +42,8 @@ import Goodcause from "../assets/images/goodcause.jpg";
       <h3>Funds Raised This Year</h3>
       <p id="count-up" data-target="173762">0 KR.</p>
       <p>
-        We walked 120 km on the Camino to raise funds for BørneTelefonen - and
-        thanks to your support, we collected an amazing 173,762 DKK. Every step
-        helped support children and young people in need.
+        We walked 120 km on the Camino to raise funds for BørneTelefonen - and thanks to your support, we collected an
+        amazing 173,762 DKK. Every step helped support children and young people in need.
       </p>
       <a class="button" href="">
         <button>JOIN US NEXT TIME</button>
@@ -69,6 +66,7 @@ import Goodcause from "../assets/images/goodcause.jpg";
   .hero img {
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.5);
   }
 
   .hero-text {
@@ -76,7 +74,7 @@ import Goodcause from "../assets/images/goodcause.jpg";
     bottom: 40%;
     left: 35%;
     transform: translateY(0);
-    color: white;
+    color: var(--offwhite-color);
   }
 
   .hero-text h1 {
@@ -85,9 +83,8 @@ import Goodcause from "../assets/images/goodcause.jpg";
   }
 
   .hero-text p {
-    font-size: 12px;
     margin: 8px 0 0;
-    font-weight: 300;
+    text-align: center;
   }
 
   img {
@@ -171,7 +168,6 @@ import Goodcause from "../assets/images/goodcause.jpg";
       top: 45%;
       left: 40%;
       transform: translateY(-50%);
-      color: white;
     }
 
     .hero-text h1 {
@@ -180,9 +176,8 @@ import Goodcause from "../assets/images/goodcause.jpg";
     }
 
     .hero-text p {
-      font-size: 1.2rem;
       margin: 25px;
-      font-weight: 300;
+      align-items: center;
     }
 
     .info {
@@ -246,6 +241,11 @@ import Goodcause from "../assets/images/goodcause.jpg";
       grid-column: 2 / 3;
       grid-row: 1;
     }
+    .body,
+    .funds-raised {
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
   }
 </style>
 <script>
@@ -261,8 +261,7 @@ import Goodcause from "../assets/images/goodcause.jpg";
       current += increment;
 
       if (current < target) {
-        counter.textContent =
-          Math.floor(current).toLocaleString("da-DK") + " KR.";
+        counter.textContent = Math.floor(current).toLocaleString("da-DK") + " KR.";
         requestAnimationFrame(update);
       } else {
         counter.textContent = target.toLocaleString("da-DK") + " KR.";
