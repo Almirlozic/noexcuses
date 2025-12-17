@@ -17,11 +17,13 @@ const isSoldOut = data.sold_out === true || data.sold_out === "true";
           class={`main ${isSoldOut ? "sold-out-img" : ""}`}
           src={`https://yiiqdouriasazhyrfuzt.supabase.co/storage/v1/object/public/merch/${image1}`}
           alt={data.title}
+          loading="lazy"
         />
         <img
           class={`hover ${isSoldOut ? "sold-out-img" : ""}`}
           src={`https://yiiqdouriasazhyrfuzt.supabase.co/storage/v1/object/public/merch/${image2}`}
           alt={data.title}
+          loading="lazy"
         />
         {isSoldOut && <div class="sold-out">SOLD OUT</div>}
       </div>
