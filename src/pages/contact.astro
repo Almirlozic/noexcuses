@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import contact from "../assets/images/contact.jpg";
+import contact from "../assets/images/contact.webp";
 import SignUp from "../components/SignUp.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -19,10 +20,7 @@ import SignUp from "../components/SignUp.astro";
             Interested in personal or company training?
           </p>
 
-          <p>
-            Fill out the form or reach out through our socials and we will
-            contact you.
-          </p>
+          <p>Fill out the form or reach out through our socials and we will contact you.</p>
         </div>
 
         <form class="contact-form">
@@ -44,7 +42,7 @@ import SignUp from "../components/SignUp.astro";
         </form>
       </div>
       <div>
-        <img class="contact-image" src={contact.src} alt="people running" />
+        <Image class="contact-image" src={contact} alt="people running" fetchpriority="high" />
       </div>
     </div>
   </section>
