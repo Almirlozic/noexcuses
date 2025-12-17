@@ -3,13 +3,13 @@ import Font from "astro/components/Font.astro";
 import Layout from "../layouts/Layout.astro";
 import Faq from "../components/Faq.astro";
 import SignUp from "../components/SignUp.astro";
-import herobillede from "../assets/images/training1.jpg";
+import herobillede from "../assets/images/training1.webp";
 import clock from "../assets/images/Clock.svg";
-import company1 from "../assets/images/training2.jpg";
-import company2 from "../assets/images/training.jpg";
-import pouri from "../assets/logoer/pouri.png";
-import juli from "../assets/logoer/juli.png";
-import nusa from "../assets/logoer/nusa.png";
+import company1 from "../assets/images/training2.webp";
+import company2 from "../assets/images/training.webp";
+import pouri from "../assets/logoer/pouri.svg";
+import juli from "../assets/logoer/juli.svg";
+import nusa from "../assets/logoer/nusa.svg";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -24,7 +24,11 @@ import nusa from "../assets/logoer/nusa.png";
     <body>
       <section class="hero">
         <div>
-          <img class="hero-img" src={herobillede.src} alt="people in a team" />
+          <img
+            class="hero-img"
+            src={herobillede.src}
+            alt="group picture of runners outside Juli pizza"
+          />
         </div>
         <h1 class="hero_h1">TRAINING</h1>
         <p class="hero_p">
@@ -41,7 +45,7 @@ import nusa from "../assets/logoer/nusa.png";
             <div class="date">
               <p class="p2">MONDAY</p>
               <p class="time">
-                <img class="hero" src={clock.src} alt="watch" /> 6:00 - 7:00
+                <img class="hero" src={clock.src} alt="a clock" /> 6:00 - 7:00
               </p>
             </div>
 
@@ -61,7 +65,7 @@ import nusa from "../assets/logoer/nusa.png";
             <div class="date">
               <p class="p2">TUESDAY</p>
               <p class="time">
-                <img class="hero" src={clock.src} alt="watch" /> 17:30 - 18:30
+                <img class="hero" src={clock.src} alt="a clock" /> 17:30 - 18:30
               </p>
             </div>
 
@@ -81,7 +85,7 @@ import nusa from "../assets/logoer/nusa.png";
             <div class="date">
               <p class="p2">THURSDAY</p>
               <p class="time">
-                <img class="hero" src={clock.src} alt="watch" /> 6:00 - 7:00
+                <img class="hero" src={clock.src} alt="a clock" /> 6:00 - 7:00
               </p>
             </div>
 
@@ -101,7 +105,7 @@ import nusa from "../assets/logoer/nusa.png";
             <div class="date">
               <p class="p2">FRIDAY</p>
               <p class="time">
-                <img class="hero" src={clock.src} alt="watch" /> 8:00 - 9:00
+                <img class="hero" src={clock.src} alt="a clock" /> 8:00 - 9:00
               </p>
             </div>
 
@@ -181,16 +185,16 @@ import nusa from "../assets/logoer/nusa.png";
               <a href="/contact">CONTACT US TO GET STARTED</a>
             </div>
             <div class="DT_img">
-              <img src={company2.src} alt="team spirit" />
+              <img src={company2.src} alt="people high-fiving" />
             </div>
           </section>
 
           <div class="Testimony">
             <h3>COMPANIES WHO ENJOYS OUR TRAINING</h3>
             <div class="Testimony_show">
-              <img src={nusa.src} alt="nusa" />
-              <img src={pouri.src} alt="pouri" />
-              <img src={juli.src} alt="juli" />
+              <img src={nusa.src} alt="planet nusa logo" />
+              <img src={pouri.src} alt="pouri logo" />
+              <img src={juli.src} alt="Juli logo" />
             </div>
           </div>
         </section>
@@ -316,7 +320,6 @@ import nusa from "../assets/logoer/nusa.png";
     .CT_hero_text {
       position: relative;
       z-index: 3;
-      margin-top: -30px;
     }
     .CT_info {
       padding: 20px;
