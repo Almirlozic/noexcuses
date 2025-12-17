@@ -27,7 +27,8 @@ import { Image } from "astro:assets";
             class="hero-img"
             src={herobillede}
             alt="group picture of runners outside Juli pizza"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
         <h1 class="hero_h1">TRAINING</h1>
@@ -240,8 +241,15 @@ import { Image } from "astro:assets";
     .SO {
       margin-left: 20px;
     }
-    .hero-img {
+    /*  .hero-img {
       max-width: 100%;
+      filter: brightness(0.5);
+    } */
+    .hero-img {
+      width: 100vw;
+      height: fit-content;
+      object-fit: cover;
+      margin-left: calc(50% - 50vw);
       filter: brightness(0.5);
     }
     .hero_h1 {
@@ -412,12 +420,7 @@ import { Image } from "astro:assets";
       .hero {
         display: grid;
       }
-      .hero-img {
-        width: 100vw;
-        height: fit-content;
-        object-fit: cover;
-        margin-left: calc(50% - 50vw);
-      }
+
       .hero_h1 {
         margin-top: -27.5%;
         position: relative;
