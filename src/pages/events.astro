@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SignUp from "../components/SignUp.astro";
-import event1 from "../assets/images/7days.png";
-import event2 from "../assets/images/juli.png";
-import event3 from "../assets/images/portugal-retreat.png";
-import event4 from "../assets/images/nusa.png";
+import event1 from "../assets/images/7days.webp";
+import event2 from "../assets/images/juli.webp";
+import event3 from "../assets/images/portugal-retreat.webp";
+import event4 from "../assets/images/nusa.webp";
+import { Image } from "astro:assets";
+import { lazy } from "astro:schema";
 ---
 
 <Layout>
@@ -17,7 +19,7 @@ import event4 from "../assets/images/nusa.png";
       <div class="event-wrapper">
         <input type="checkbox" class="toggle" id="event1-toggle" />
         <label for="event1-toggle">
-          <img class="new-event" src={event1.src} alt="7 DAYS ACTIVE collab" />
+          <Image class="new-event" src={event1} alt="7 DAYS ACTIVE collab" loading="lazy" />
           <div class="event-overlay"></div>
           <a href="/signup">
             <button>READ MORE</button>
@@ -27,7 +29,7 @@ import event4 from "../assets/images/nusa.png";
       <div class="event-wrapper">
         <input type="checkbox" class="toggle" id="event2-toggle" />
         <label for="event2-toggle">
-          <img class="new-event" src={event2.src} alt="JULI PIZZA collab" />
+          <Image class="new-event" src={event2} alt="JULI PIZZA collab" loading="lazy" />
           <div class="event-overlay"></div>
           <a href="/signup">
             <button>READ MORE</button>
@@ -38,10 +40,10 @@ import event4 from "../assets/images/nusa.png";
     <h1>PREVIOUS EVENTS</h1>
     <div class="event-cards">
       <div class="event-card3">
-        <img src={event3.src} alt="Portugal training-trip" />
+        <Image src={event3} alt="Portugal training-trip" loading="lazy" />
       </div>
       <div class="event-card4">
-        <img src={event4.src} alt="NUSA PLANET collab" />
+        <Image src={event4} alt="NUSA PLANET collab" loading="lazy" />
       </div>
     </div>
   </main>
