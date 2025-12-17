@@ -20,229 +20,229 @@ import { Image } from "astro:assets";
       <SignUp />
     </section>
 
-    <body>
-      <section class="hero">
+    <section class="hero">
+      <div>
+        <Image
+          class="hero-img"
+          src={herobillede}
+          alt="group picture of runners outside Juli pizza"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+      <h1 class="hero_h1">TRAINING</h1>
+      <p class="hero_p">
+        <em
+          >The training is open to everyone - all levels can join, just sign up.</em
+        >
+      </p>
+    </section>
+    <section class="body">
+      <h2 class="SO">SESSIONS OVERVIEW</h2>
+      <section class="classes">
         <div>
-          <Image
-            class="hero-img"
-            src={herobillede}
-            alt="group picture of runners outside Juli pizza"
-            loading="lazy"
-          />
+          <div class="date">
+            <p class="p2">MONDAY</p>
+            <p class="time">
+              <Image src={clock} alt="a clock" loading="lazy" />
+              6:00 - 7:00
+            </p>
+          </div>
+
+          <h2>LEGS FOCUS - SMK</h2>
+          <strong>The training includes:</strong>
+          <ul>
+            <li><p>Hill sprints</p></li>
+            <li><p>Body weight exercises</p></li>
+          </ul>
+
+          <p>
+            <a
+              class="BOOK_CTA"
+              href="/signup"
+              aria-label="book a training session">BOOK</a
+            >
+          </p>
         </div>
-        <h1 class="hero_h1">TRAINING</h1>
-        <p class="hero_p">
-          <em
-            >The training is open to everyone - all levels can join, just sign
-            up.</em
-          >
-        </p>
+
+        <div class="card">
+          <div class="date">
+            <p class="p2">TUESDAY</p>
+            <p class="time">
+              <Image src={clock} alt="a clock" loading="lazy" />17:30 - 18:30
+            </p>
+          </div>
+
+          <h2>EVENING PUMP - NYBODER</h2>
+          <strong>The training includes:</strong>
+          <ul>
+            <li><p>Burpees</p></li>
+            <li><p>Body weight exercises</p></li>
+          </ul>
+
+          <p>
+            <a
+              class="BOOK_CTA"
+              href="/signup"
+              aria-label="book a training session">BOOK</a
+            >
+          </p>
+        </div>
+
+        <div>
+          <div class="date">
+            <p class="p2">THURSDAY</p>
+            <p class="time">
+              <Image src={clock} alt="a clock" loading="lazy" /> 6:00 - 7:00
+            </p>
+          </div>
+
+          <h2>OUTDOOR - BLOX</h2>
+          <strong>The training includes:</strong>
+          <ul>
+            <li><p>250–500 meter runs</p></li>
+            <li><p>Weight lifting (various weight options)</p></li>
+          </ul>
+
+          <p>
+            <a
+              class="BOOK_CTA"
+              href="/signup"
+              aria-label="book a training session">BOOK</a
+            >
+          </p>
+        </div>
+
+        <div>
+          <div class="date">
+            <p class="p2">FRIDAY</p>
+            <p class="time">
+              <Image src={clock} alt="a clock" loading="lazy" /> 8:00 - 9:00
+            </p>
+          </div>
+
+          <h2>FREAKY FRIDAY - OFELIA</h2>
+          <strong>The training includes:</strong>
+          <ul>
+            <li><p>Circle training</p></li>
+            <li><p>Interval runs</p></li>
+          </ul>
+
+          <p>
+            <a
+              class="BOOK_CTA"
+              href="/signup"
+              aria-label="book a training session">BOOK</a
+            >
+          </p>
+        </div>
+
+        <a class="SU" href="/signup" aria-label="SIGN UP TO VIEW FULL SCHEDULE"
+          >SIGN UP TO VIEW FULL SCHEDULE</a
+        >
       </section>
-      <section class="body">
-        <h2 class="SO">SESSIONS OVERVIEW</h2>
-        <section class="classes">
+
+      <section class="CT">
+        <Image
+          class="CT_img"
+          src={company1}
+          alt="people running"
+          loading="lazy"
+        />
+        <div class="CT_hero_content">
+          <div class="overlay"></div>
+          <div class="CT_hero_text">
+            <h1 style="color: white;">COMPANY TRAINING</h1>
+            <p style="color: white;">
+              <span>Interested in company training? </span><br />
+              <em
+                >Contact us, and we’ll help you set up a session for your team.</em
+              >
+            </p>
+          </div>
+        </div>
+        <section class="CT_info">
           <div>
-            <div class="date">
-              <p class="p2">MONDAY</p>
-              <p class="time">
-                <Image src={clock} alt="a clock" loading="lazy" />
-                6:00 - 7:00
-              </p>
-            </div>
-
-            <h2>LEGS FOCUS - SMK</h2>
-            <strong>The training includes:</strong>
-            <ul>
-              <li><p>Hill sprints</p></li>
-              <li><p>Body weight exercises</p></li>
-            </ul>
-
-            <p>
-              <a
-                class="BOOK_CTA"
-                href="/signup"
-                aria-label="book a training session">BOOK</a
-              >
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="date">
-              <p class="p2">TUESDAY</p>
-              <p class="time">
-                <Image src={clock} alt="a clock" loading="lazy" />17:30 - 18:30
-              </p>
-            </div>
-
-            <h2>EVENING PUMP - NYBODER</h2>
-            <strong>The training includes:</strong>
-            <ul>
-              <li><p>Burpees</p></li>
-              <li><p>Body weight exercises</p></li>
-            </ul>
-
-            <p>
-              <a
-                class="BOOK_CTA"
-                href="/signup"
-                aria-label="book a training session">BOOK</a
-              >
-            </p>
-          </div>
-
-          <div>
-            <div class="date">
-              <p class="p2">THURSDAY</p>
-              <p class="time">
-                <Image src={clock} alt="a clock" loading="lazy" /> 6:00 - 7:00
-              </p>
-            </div>
-
-            <h2>OUTDOOR - BLOX</h2>
-            <strong>The training includes:</strong>
-            <ul>
-              <li><p>250–500 meter runs</p></li>
-              <li><p>Weight lifting (various weight options)</p></li>
-            </ul>
-
-            <p>
-              <a
-                class="BOOK_CTA"
-                href="/signup"
-                aria-label="book a training session">BOOK</a
-              >
-            </p>
-          </div>
-
-          <div>
-            <div class="date">
-              <p class="p2">FRIDAY</p>
-              <p class="time">
-                <Image src={clock} alt="a clock" loading="lazy" /> 8:00 - 9:00
-              </p>
-            </div>
-
-            <h2>FREAKY FRIDAY - OFELIA</h2>
-            <strong>The training includes:</strong>
-            <ul>
-              <li><p>Circle training</p></li>
-              <li><p>Interval runs</p></li>
-            </ul>
-
-            <p>
-              <a
-                class="BOOK_CTA"
-                href="/signup"
-                aria-label="book a training session">BOOK</a
-              >
-            </p>
-          </div>
-
-          <a
-            class="SU"
-            href="/signup"
-            aria-label="SIGN UP TO VIEW FULL SCHEDULE"
-            >SIGN UP TO VIEW FULL SCHEDULE</a
-          >
-        </section>
-
-        <section class="CT">
-          <Image
-            class="CT_img"
-            src={company1}
-            alt="people running"
-            loading="lazy"
-          />
-          <div class="CT_hero_content">
-            <div class="overlay"></div>
-            <div class="CT_hero_text">
-              <h1 style="color: white;">COMPANY TRAINING</h1>
-              <p style="color: white;">
-                <span>Interested in company training? </span><br />
+            <h3>Why Choose Outdoor Company Training?</h3>
+            <div class="company">
+              <ul>
+                <li>
+                  <p>
+                    Team building: Working out together builds stronger
+                    relationships
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Fresh air & daylight: Boosts mood, productivity, and
+                    creativity
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Professional coaching: Experienced instructors guiding safe
+                    and effective workouts
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Flexible scheduling: Early mornings, lunch-hour, or after
+                    work
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    City-based training: Easy meet-up locations across
+                    Copenhagen - or even in your backyard
+                  </p>
+                </li>
+              </ul>
+              <p>
                 <em
-                  >Contact us, and we’ll help you set up a session for your
-                  team.</em
+                  >“Our team loved it, the outdoor sessions gave us new energy
+                  and connection.” <br /> — Planet Nusa Director 2024</em
                 >
               </p>
             </div>
+            <a href="/contact" aria-label="contact us"
+              >CONTACT US TO GET STARTED</a
+            >
           </div>
-          <section class="CT_info">
-            <div>
-              <h3>Why Choose Outdoor Company Training?</h3>
-              <div class="company">
-                <ul>
-                  <li>
-                    <p>
-                      Team building: Working out together builds stronger
-                      relationships
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      Fresh air & daylight: Boosts mood, productivity, and
-                      creativity
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      Professional coaching: Experienced instructors guiding
-                      safe and effective workouts
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      Flexible scheduling: Early mornings, lunch-hour, or after
-                      work
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      City-based training: Easy meet-up locations across
-                      Copenhagen - or even in your backyard
-                    </p>
-                  </li>
-                </ul>
-                <p>
-                  <em
-                    >“Our team loved it, the outdoor sessions gave us new energy
-                    and connection.” <br /> — Planet Nusa Director 2024</em
-                  >
-                </p>
-              </div>
-              <a href="/contact" aria-label="contact us"
-                >CONTACT US TO GET STARTED</a
-              >
-            </div>
-            <div class="DT_img">
-              <Image
-                class="img"
-                src={company2}
-                alt="people high-fiving"
-                loading="lazy"
-              />
-            </div>
-          </section>
-
-          <div class="Testimony">
-            <h3>COMPANIES WHO ENJOYS OUR TRAINING</h3>
-            <div class="Testimony_show">
-              <Image src={nusa} alt="planet nusa logo" loading="lazy" />
-              <Image src={pouri} alt="pouri logo" loading="lazy" />
-              <Image src={juli} alt="Juli logo" loading="lazy" />
-            </div>
+          <div class="DT_img">
+            <Image
+              class="img"
+              src={company2}
+              alt="people high-fiving"
+              loading="lazy"
+            />
           </div>
         </section>
+
+        <div class="Testimony">
+          <h3>COMPANIES WHO ENJOYS OUR TRAINING</h3>
+          <div class="Testimony_show">
+            <Image src={nusa} alt="planet nusa logo" loading="lazy" />
+            <Image src={pouri} alt="pouri logo" loading="lazy" />
+            <Image src={juli} alt="Juli logo" loading="lazy" />
+          </div>
+        </div>
       </section>
-    </body>
+    </section>
   </main>
 
   <style>
     .SO {
       margin-left: 20px;
     }
-    .hero-img {
+    /*  .hero-img {
       max-width: 100%;
       filter: brightness(0.5);
+    } */
+    .hero-img {
+      width: 100%;
+      height: fit-content;
+      object-fit: cover;
+      margin-left: calc(50% - 50vw);
     }
     .hero_h1 {
       color: white;
@@ -412,12 +412,12 @@ import { Image } from "astro:assets";
       .hero {
         display: grid;
       }
-      .hero-img {
+      /* .hero-img {
         width: 100vw;
         height: fit-content;
         object-fit: cover;
         margin-left: calc(50% - 50vw);
-      }
+      } */
       .hero_h1 {
         margin-top: -27.5%;
         position: relative;
