@@ -20,7 +20,10 @@ import { Image } from "astro:assets";
             Interested in personal or company training?
           </p>
 
-          <p>Fill out the form or reach out through our socials and we will contact you.</p>
+          <p>
+            Fill out the form or reach out through our socials and we will
+            contact you.
+          </p>
         </div>
 
         <form class="contact-form">
@@ -42,7 +45,13 @@ import { Image } from "astro:assets";
         </form>
       </div>
       <div>
-        <Image class="contact-image" src={contact} alt="people running" fetchpriority="high" />
+        <Image
+          class="contact-image"
+          src={contact}
+          alt="people running"
+          fetchpriority="high"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
