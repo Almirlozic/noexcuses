@@ -3,7 +3,7 @@ import Font from "astro/components/Font.astro";
 import Layout from "../layouts/Layout.astro";
 import Faq from "../components/Faq.astro";
 import SignUp from "../components/SignUp.astro";
-import træning1 from "../assets/images/index.jpg";
+import index from "../assets/images/index.webp";
 import video from "../assets/images/noexcuses-video.mp4";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -16,7 +16,7 @@ import video from "../assets/images/noexcuses-video.mp4";
       <SignUp />
     </section>
     <section class="forside_hero">
-      <video autoplay loop muted playsinline class="bg-clip">
+      <video autoplay loop muted playsinline class="bg-clip" loading="lazy">
         <source src={video} type="video/mp4" />
       </video>
       <div class="hero_content">
@@ -72,7 +72,7 @@ import video from "../assets/images/noexcuses-video.mp4";
           <a class="CTA_started" href="/signup">VIEW BUNDLES & GET STARTED</a>
         </div>
         <div class="index_img">
-          <img src={træning1.src} alt="people training" />
+          <img src={index.src} alt="people training" loading="lazy" />
         </div>
       </section>
 
@@ -219,7 +219,7 @@ import video from "../assets/images/noexcuses-video.mp4";
     .CTA_started {
       padding: 10px;
       background-color: transparent;
-      border: 1px solid black;
+      border: 1.5px solid black;
       color: black;
       text-decoration: none;
     }
