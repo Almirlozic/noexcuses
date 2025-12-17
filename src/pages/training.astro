@@ -32,7 +32,10 @@ import { Image } from "astro:assets";
         </div>
         <h1 class="hero_h1">TRAINING</h1>
         <p class="hero_p">
-          <em>The training is open to everyone - all levels can join, just sign up.</em>
+          <em
+            >The training is open to everyone - all levels can join, just sign
+            up.</em
+          >
         </p>
       </section>
       <section class="body">
@@ -55,7 +58,11 @@ import { Image } from "astro:assets";
             </ul>
 
             <p>
-              <a class="BOOK_CTA" href="/signup">BOOK</a>
+              <a
+                class="BOOK_CTA"
+                href="/signup"
+                aria-label="book a training session">BOOK</a
+              >
             </p>
           </div>
 
@@ -75,7 +82,11 @@ import { Image } from "astro:assets";
             </ul>
 
             <p>
-              <a class="BOOK_CTA" href="/signup">BOOK</a>
+              <a
+                class="BOOK_CTA"
+                href="/signup"
+                aria-label="book a training session">BOOK</a
+              >
             </p>
           </div>
 
@@ -95,7 +106,11 @@ import { Image } from "astro:assets";
             </ul>
 
             <p>
-              <a class="BOOK_CTA" href="/signup">BOOK</a>
+              <a
+                class="BOOK_CTA"
+                href="/signup"
+                aria-label="book a training session">BOOK</a
+              >
             </p>
           </div>
 
@@ -115,22 +130,39 @@ import { Image } from "astro:assets";
             </ul>
 
             <p>
-              <a class="BOOK_CTA" href="/signup">BOOK</a>
+              <a
+                class="BOOK_CTA"
+                href="/signup"
+                aria-label="book a training session">BOOK</a
+              >
             </p>
           </div>
 
-          <a class="SU" href="/signup">SIGN UP TO VIEW FULL SCHEDULE</a>
+          <a
+            class="SU"
+            href="/signup"
+            aria-label="SIGN UP TO VIEW FULL SCHEDULE"
+            >SIGN UP TO VIEW FULL SCHEDULE</a
+          >
         </section>
 
         <section class="CT">
-          <Image class="CT_img" src={company1} alt="people running" loading="lazy" />
+          <Image
+            class="CT_img"
+            src={company1}
+            alt="people running"
+            loading="lazy"
+          />
           <div class="CT_hero_content">
             <div class="overlay"></div>
             <div class="CT_hero_text">
               <h1 style="color: white;">COMPANY TRAINING</h1>
               <p style="color: white;">
                 <span>Interested in company training? </span><br />
-                <em>Contact us, and we’ll help you set up a session for your team.</em>
+                <em
+                  >Contact us, and we’ll help you set up a session for your
+                  team.</em
+                >
               </p>
             </div>
           </div>
@@ -140,38 +172,54 @@ import { Image } from "astro:assets";
               <div class="company">
                 <ul>
                   <li>
-                    <p>Team building: Working out together builds stronger relationships</p>
-                  </li>
-                  <li>
-                    <p>Fresh air & daylight: Boosts mood, productivity, and creativity</p>
-                  </li>
-                  <li>
                     <p>
-                      Professional coaching: Experienced instructors guiding safe and effective
-                      workouts
+                      Team building: Working out together builds stronger
+                      relationships
                     </p>
                   </li>
                   <li>
-                    <p>Flexible scheduling: Early mornings, lunch-hour, or after work</p>
+                    <p>
+                      Fresh air & daylight: Boosts mood, productivity, and
+                      creativity
+                    </p>
                   </li>
                   <li>
                     <p>
-                      City-based training: Easy meet-up locations across Copenhagen - or even in
-                      your backyard
+                      Professional coaching: Experienced instructors guiding
+                      safe and effective workouts
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Flexible scheduling: Early mornings, lunch-hour, or after
+                      work
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      City-based training: Easy meet-up locations across
+                      Copenhagen - or even in your backyard
                     </p>
                   </li>
                 </ul>
                 <p>
                   <em
-                    >“Our team loved it, the outdoor sessions gave us new energy and connection.” <br
-                    /> — Planet Nusa Director 2024</em
+                    >“Our team loved it, the outdoor sessions gave us new energy
+                    and connection.” <br /> — Planet Nusa Director 2024</em
                   >
                 </p>
               </div>
-              <a href="/contact">CONTACT US TO GET STARTED</a>
+              <a href="/contact" aria-label="contact us"
+                >CONTACT US TO GET STARTED</a
+              >
             </div>
             <div class="DT_img">
-              <Image class="img" src={company2} alt="people high-fiving" loading="lazy" />
+              <Image
+                class="img"
+                src={company2}
+                alt="people high-fiving"
+                loading="lazy"
+              />
             </div>
           </section>
 
